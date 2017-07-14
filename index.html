@@ -392,7 +392,33 @@
 <h3 id="配置SSH"><a href="#配置SSH" class="headerlink" title="配置SSH"></a>配置SSH</h3><p>第1步：创建SSH Key。在用户主目录下，看看有没有.ssh目录，如果有，再看看这个目录下有没有id_rsa和id_rsa.pub这两个文件，如果已经有了，可直接跳到下一步。如果没有，打开Shell（Windows下打开Git Bash），创建SSH Key：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ssh-keygen -t rsa -C <span class="string">"youremail@example.com"</span></div></pre></td></tr></table></figure></p>
 <p>你需要把邮件地址换成你自己的邮件地址，然后一路回车，使用默认值即可</p>
 <p>第2步：登陆GitHub，打开“Account settings”，“SSH Keys”页面：<br>然后，点“Add SSH Key”，填上任意Title，在Key文本框里粘贴id_rsa.pub文件的内容： 点“Add Key”，你就应该看到已经添加的Key，完成。</p>
-<p>###在Github中新建 repository：</p>
+<h3 id="在Github中新建-repository："><a href="#在Github中新建-repository：" class="headerlink" title="在Github中新建 repository："></a>在Github中新建 repository：</h3><blockquote>
+<ul>
+<li>Repository name为yourname.github.io      并把Public和README勾选上<br><img src="http://wx3.sinaimg.cn/mw690/006STR9mly1fhja6x7dg3j30m904jaa9.jpg" alt="此处输入图片的描述"></li>
+</ul>
+</blockquote>
+<h3 id="在Git-Bash中配置："><a href="#在Git-Bash中配置：" class="headerlink" title="在Git Bash中配置："></a>在Git Bash中配置：</h3><pre><code class="python">$ git clone https://github.com/HelloChuang/HelloChuang.github.io.git
+$ cd HelloChuang.github.io
+$ echo <span class="string">"Hello World"</span> &gt; index.html 
+$ git add --all
+$ git commit -m <span class="string">"Initial commit"</span>
+$ git push -u origin master
+</code></pre>
+<h3 id="Repository-Settings中"><a href="#Repository-Settings中" class="headerlink" title="Repository Settings中:"></a>Repository Settings中:</h3><blockquote>
+<ul>
+<li>将自己购买的域名填上<br><img src="http://wx3.sinaimg.cn/mw690/006STR9mly1fhja6yen7sj30mu04t3yj.jpg" alt="此处输入图片的描述"></li>
+</ul>
+</blockquote>
+<h2 id="2-在万网的域名管理中："><a href="#2-在万网的域名管理中：" class="headerlink" title="2.在万网的域名管理中："></a>2.在万网的域名管理中：</h2><blockquote>
+<ul>
+<li>点击解析<img src="http://wx4.sinaimg.cn/mw690/006STR9mly1fhja6xrnnnj3075057a9w.jpg" alt="此处输入图片的描述"></li>
+</ul>
+<ul>
+<li>ping一下  HelloChuang.github.io的ip   将解析的ip填进去，然后出来这个<img src="http://wx4.sinaimg.cn/mw690/006STR9mly1fhja6z1nwzj30yv04pdfx.jpg" alt="此处输入图片的描述"></li>
+</ul>
+</blockquote>
+<p>  现在打开你的网站会提示404，最后一步，向本地库根目录（HelloChuang.github.io）中添加 一个名为CNAME的文件（不要后缀），文件内容为你的顶级域名。</p>
+<p>  OK</p>
 
           
         
@@ -677,7 +703,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共304字</span>
+  <span class="post-count">博客全站共455字</span>
 </div>
         
 
