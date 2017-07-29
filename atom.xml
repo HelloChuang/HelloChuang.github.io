@@ -84,6 +84,57 @@
   </entry>
   
   <entry>
+    <title>利用GitHub创建个人网站</title>
+    <link href="http://yoursite.com/2017/07/14/%E5%A6%82%E4%BD%95%E5%88%A9%E7%94%A8Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/"/>
+    <id>http://yoursite.com/2017/07/14/如何利用Github搭建个人网站/</id>
+    <published>2017-07-14T03:17:35.000Z</published>
+    <updated>2017-07-29T05:04:37.820Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="1-搭建GitHub环境"><a href="#1-搭建GitHub环境" class="headerlink" title="1.搭建GitHub环境"></a>1.搭建GitHub环境</h2><p>首先注册Github账号<br>下载GIT，安装完成后打开Git Bash<br>在命令行输入：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ git config --<span class="keyword">global</span> user.name <span class="string">"Your Name"</span></div><div class="line">$ git config --<span class="keyword">global</span> user.email <span class="string">"email@example.com"</span></div></pre></td></tr></table></figure></p>
+<h3 id="配置SSH"><a href="#配置SSH" class="headerlink" title="配置SSH"></a>配置SSH</h3><p>第1步：创建SSH Key。在用户主目录下，看看有没有.ssh目录，如果有，再看看这个目录下有没有id_rsa和id_rsa.pub这两个文件，如果已经有了，可直接跳到下一步。如果没有，打开Shell（Windows下打开Git Bash），创建SSH Key：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ssh-keygen -t rsa -C <span class="string">"youremail@example.com"</span></div></pre></td></tr></table></figure></p>
+<p>你需要把邮件地址换成你自己的邮件地址，然后一路回车，使用默认值即可</p>
+<p>第2步：登陆GitHub，打开“Account settings”，“SSH Keys”页面：<br>然后，点“Add SSH Key”，填上任意Title，在Key文本框里粘贴id_rsa.pub文件的内容： 点“Add Key”，你就应该看到已经添加的Key，完成。</p>
+<h3 id="在Github中新建-repository："><a href="#在Github中新建-repository：" class="headerlink" title="在Github中新建 repository："></a>在Github中新建 repository：</h3><blockquote>
+<ul>
+<li>Repository name为yourname.github.io      并把Public和README勾选上<br><img src="http://wx3.sinaimg.cn/mw690/006STR9mly1fhja6x7dg3j30m904jaa9.jpg" alt="此处输入图片的描述"></li>
+</ul>
+</blockquote>
+<h3 id="在Git-Bash中配置："><a href="#在Git-Bash中配置：" class="headerlink" title="在Git Bash中配置："></a>在Git Bash中配置：</h3><pre><code class="python">$ git clone https://github.com/HelloChuang/HelloChuang.github.io.git
+$ cd HelloChuang.github.io
+$ echo <span class="string">"Hello World"</span> &gt; index.html 
+$ git add --all
+$ git commit -m <span class="string">"Initial commit"</span>
+$ git push -u origin master
+</code></pre>
+<h3 id="Repository-Settings中"><a href="#Repository-Settings中" class="headerlink" title="Repository Settings中:"></a>Repository Settings中:</h3><blockquote>
+<ul>
+<li>将自己购买的域名填上<br><img src="http://wx3.sinaimg.cn/mw690/006STR9mly1fhja6yen7sj30mu04t3yj.jpg" alt="此处输入图片的描述"></li>
+</ul>
+</blockquote>
+<h2 id="2-在万网的域名管理中："><a href="#2-在万网的域名管理中：" class="headerlink" title="2.在万网的域名管理中："></a>2.在万网的域名管理中：</h2><blockquote>
+<ul>
+<li>点击解析<img src="http://wx4.sinaimg.cn/mw690/006STR9mly1fhja6xrnnnj3075057a9w.jpg" alt="此处输入图片的描述"></li>
+</ul>
+<ul>
+<li>ping一下  HelloChuang.github.io的ip   将解析的ip填进去，然后出来这个<img src="http://wx4.sinaimg.cn/mw690/006STR9mly1fhja6z1nwzj30yv04pdfx.jpg" alt="此处输入图片的描述"></li>
+</ul>
+</blockquote>
+<p>  现在打开你的网站会提示404，最后一步，向本地库根目录（HelloChuang.github.io）中添加 一个名为CNAME的文件（不要后缀），文件内容为你的顶级域名。</p>
+<p>  OK</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;1-搭建GitHub环境&quot;&gt;&lt;a href=&quot;#1-搭建GitHub环境&quot; class=&quot;headerlink&quot; title=&quot;1.搭建GitHub环境&quot;&gt;&lt;/a&gt;1.搭建GitHub环境&lt;/h2&gt;&lt;p&gt;首先注册Github账号&lt;br&gt;下载GIT，安装完成后打开G
+    
+    </summary>
+    
+    
+      <category term="Blog" scheme="http://yoursite.com/tags/Blog/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Hello World</title>
     <link href="http://yoursite.com/2017/07/13/hello-world/"/>
     <id>http://yoursite.com/2017/07/13/hello-world/</id>

@@ -481,6 +481,148 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/14/如何利用Github搭建个人网站/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="HelloC">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://wx4.sinaimg.cn/mw690/006STR9mly1fhja3lpor3j307s07st8o.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/07/14/如何利用Github搭建个人网站/" itemprop="url">利用GitHub创建个人网站</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-14T11:17:35+08:00">
+                2017-07-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="1-搭建GitHub环境"><a href="#1-搭建GitHub环境" class="headerlink" title="1.搭建GitHub环境"></a>1.搭建GitHub环境</h2><p>首先注册Github账号<br>下载GIT，安装完成后打开Git Bash<br>在命令行输入：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ git config --<span class="keyword">global</span> user.name <span class="string">"Your Name"</span></div><div class="line">$ git config --<span class="keyword">global</span> user.email <span class="string">"email@example.com"</span></div></pre></td></tr></table></figure></p>
+<h3 id="配置SSH"><a href="#配置SSH" class="headerlink" title="配置SSH"></a>配置SSH</h3><p>第1步：创建SSH Key。在用户主目录下，看看有没有.ssh目录，如果有，再看看这个目录下有没有id_rsa和id_rsa.pub这两个文件，如果已经有了，可直接跳到下一步。如果没有，打开Shell（Windows下打开Git Bash），创建SSH Key：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ssh-keygen -t rsa -C <span class="string">"youremail@example.com"</span></div></pre></td></tr></table></figure></p>
+<p>你需要把邮件地址换成你自己的邮件地址，然后一路回车，使用默认值即可</p>
+<p>第2步：登陆GitHub，打开“Account settings”，“SSH Keys”页面：<br>然后，点“Add SSH Key”，填上任意Title，在Key文本框里粘贴id_rsa.pub文件的内容： 点“Add Key”，你就应该看到已经添加的Key，完成。</p>
+<h3 id="在Github中新建-repository："><a href="#在Github中新建-repository：" class="headerlink" title="在Github中新建 repository："></a>在Github中新建 repository：</h3><blockquote>
+<ul>
+<li>Repository name为yourname.github.io      并把Public和README勾选上<br><img src="http://wx3.sinaimg.cn/mw690/006STR9mly1fhja6x7dg3j30m904jaa9.jpg" alt="此处输入图片的描述"></li>
+</ul>
+</blockquote>
+<h3 id="在Git-Bash中配置："><a href="#在Git-Bash中配置：" class="headerlink" title="在Git Bash中配置："></a>在Git Bash中配置：</h3><pre><code class="python">$ git clone https://github.com/HelloChuang/HelloChuang.github.io.git
+$ cd HelloChuang.github.io
+$ echo <span class="string">"Hello World"</span> &gt; index.html 
+$ git add --all
+$ git commit -m <span class="string">"Initial commit"</span>
+$ git push -u origin master
+</code></pre>
+<h3 id="Repository-Settings中"><a href="#Repository-Settings中" class="headerlink" title="Repository Settings中:"></a>Repository Settings中:</h3><blockquote>
+<ul>
+<li>将自己购买的域名填上<br><img src="http://wx3.sinaimg.cn/mw690/006STR9mly1fhja6yen7sj30mu04t3yj.jpg" alt="此处输入图片的描述"></li>
+</ul>
+</blockquote>
+<h2 id="2-在万网的域名管理中："><a href="#2-在万网的域名管理中：" class="headerlink" title="2.在万网的域名管理中："></a>2.在万网的域名管理中：</h2><blockquote>
+<ul>
+<li>点击解析<img src="http://wx4.sinaimg.cn/mw690/006STR9mly1fhja6xrnnnj3075057a9w.jpg" alt="此处输入图片的描述"></li>
+</ul>
+<ul>
+<li>ping一下  HelloChuang.github.io的ip   将解析的ip填进去，然后出来这个<img src="http://wx4.sinaimg.cn/mw690/006STR9mly1fhja6z1nwzj30yv04pdfx.jpg" alt="此处输入图片的描述"></li>
+</ul>
+</blockquote>
+<p>  现在打开你的网站会提示404，最后一步，向本地库根目录（HelloChuang.github.io）中添加 一个名为CNAME的文件（不要后缀），文件内容为你的顶级域名。</p>
+<p>  OK</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/13/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -638,7 +780,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -646,6 +788,15 @@
 
           
 
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
           
 
         </nav>
@@ -722,7 +873,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共2.9k字</span>
+  <span class="post-count">博客全站共3.3k字</span>
 </div>
         
 
