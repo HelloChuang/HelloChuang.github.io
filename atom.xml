@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-07-29T04:28:48.241Z</updated>
+  <updated>2017-07-29T04:31:38.577Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,9 +20,9 @@
     <link href="http://yoursite.com/2017/07/29/%E4%B8%80%E4%B8%AA%E6%95%85%E4%BA%8B%E8%AE%B2%E5%AE%8CHttps/"/>
     <id>http://yoursite.com/2017/07/29/一个故事讲完Https/</id>
     <published>2017-07-29T04:27:57.000Z</published>
-    <updated>2017-07-29T04:28:48.241Z</updated>
+    <updated>2017-07-29T04:31:38.577Z</updated>
     
-    <content type="html"><![CDATA[<h4 id="在码农翻身看到一篇讲https的，生动易理解。整理一下分享给大家"><a href="#在码农翻身看到一篇讲https的，生动易理解。整理一下分享给大家" class="headerlink" title="在码农翻身看到一篇讲https的，生动易理解。整理一下分享给大家"></a>在码农翻身看到一篇讲https的，生动易理解。整理一下分享给大家</h4><h2 id="1-序言"><a href="#1-序言" class="headerlink" title="1/序言"></a>1/序言</h2><p>今天来聊一聊https 安全传输的原理。</p>
+    <content type="html"><![CDATA[<h2 id="在码农翻身看到一篇讲https的，生动易理解。整理一下分享给大家"><a href="#在码农翻身看到一篇讲https的，生动易理解。整理一下分享给大家" class="headerlink" title="在码农翻身看到一篇讲https的，生动易理解。整理一下分享给大家"></a>在码农翻身看到一篇讲https的，生动易理解。整理一下分享给大家</h2><h2 id="1-序言"><a href="#1-序言" class="headerlink" title="1/序言"></a>1/序言</h2><p>今天来聊一聊https 安全传输的原理。</p>
 <p>在开始之前，我们来虚构两个人物， 一个是位于中国的张大胖（怎么又是你？！）， 还有一个是位于米国的Bill (怎么还是你？！)。</p>
 <p>这俩哥们隔着千山万水，通过网络联系上了， 两个人臭味相投，聊得火热。</p>
 <p>此时正值米国大选， 张大胖亲切地“致电”Bill, 对米国总统大选的情况表示强烈地关注。 Bill则回电说谢谢关心米国人的事情我们米国人自己做主，不用你们歪果仁瞎操心……</p>
@@ -76,7 +76,7 @@
     
     <summary type="html">
     
-      &lt;h4 id=&quot;在码农翻身看到一篇讲https的，生动易理解。整理一下分享给大家&quot;&gt;&lt;a href=&quot;#在码农翻身看到一篇讲https的，生动易理解。整理一下分享给大家&quot; class=&quot;headerlink&quot; title=&quot;在码农翻身看到一篇讲https的，生动易理解。整理一下分
+      &lt;h2 id=&quot;在码农翻身看到一篇讲https的，生动易理解。整理一下分享给大家&quot;&gt;&lt;a href=&quot;#在码农翻身看到一篇讲https的，生动易理解。整理一下分享给大家&quot; class=&quot;headerlink&quot; title=&quot;在码农翻身看到一篇讲https的，生动易理解。整理一下分
     
     </summary>
     
